@@ -50,6 +50,20 @@ void delete(List *l){
     free(e);
 }
 
+int get(List *l, int index){
+    Element *e = l->origine;
+    if(index < 0){
+        exit(EXIT_FAILURE);
+    }
+    for(int j = 0; j < index; j++){
+        if(e->suivant == NULL){
+            exit(EXIT_FAILURE);
+        }
+        e = e->suivant;
+    }
+    return e->nombre;
+}
+
 void printList(List *l){
     Element *i = l->origine;
     while (i != NULL)

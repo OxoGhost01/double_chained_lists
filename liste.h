@@ -21,4 +21,5 @@ void append(List *l, int nvNombre);
 void delete(List *l);
 void printList(List *l);
 void main();
+int get(List *l, int index);
 #endif
