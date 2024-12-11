@@ -17,7 +17,7 @@ struct List {
 };
 
 List *init();
-void append(List *l, int nvNombre);
+void append(List *l, int value);
 void delete(List *l);
 void printList(List *l);
 void main();

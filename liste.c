@@ -16,17 +16,17 @@ List *init(){
     return liste;
 }
 
-void append(List *l, int nvNombre){
+void append(List *l, int value){
     Element *i = l->origine;
     if(i->nombre == 0){
-        i->nombre = nvNombre;
+        i->nombre = value;
     }
     else{
         Element *e = malloc(sizeof(*e));
         if(e == NULL){
             exit(EXIT_FAILURE);
         }
-        e->nombre = nvNombre;
+        e->nombre = value;
         e->suivant = NULL;
         while (i->suivant != NULL)
         {
