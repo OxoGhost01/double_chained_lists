@@ -22,4 +22,5 @@ void delete(List *l);
 void printList(List *l);
 void main();
 int get(List *l, int index);
+int len(List *l);
 #endif
