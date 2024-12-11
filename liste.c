@@ -64,6 +64,17 @@ int get(List *l, int index){
     return e->nombre;
 }
 
+int len(List *l){
+    Element *e = l->origine;
+    int count = 0;
+    while (e!= NULL)
+    {
+        count++;
+        e = e->suivant;
+    }
+    return count;
+}
+
 void printList(List *l){
     Element *i = l->origine;
     while (i != NULL)
