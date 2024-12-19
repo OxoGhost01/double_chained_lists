@@ -84,3 +84,28 @@ void printList(List *l){
     }
     printf("NULL\n");
 }
+
+
+void concaten(List *l1, List *l2){
+    Element *i = l1->origine;
+    while (i->suivant!= NULL)
+    {
+        i = i->suivant;
+    }
+    i->suivant = l2->origine;
+    l2->origine->precedent = i;
+}
+
+void replace(List *l, int index, int value){
+    Element *e = l->origine;
+    if(index < 0){
+        exit(EXIT_FAILURE);
+    }
+    for(int j = 0; j < index; j++){
+        if(e->suivant == NULL){
+            exit(EXIT_FAILURE);
+        }
+        e = e->suivant;
+    }
+    e->nombre = value;
+}

@@ -23,4 +23,6 @@ void printList(List *l);
 void main();
 int get(List *l, int index);
 int len(List *l);
+void concaten(List *l1, List *l2);
+void replace(List *l, int index, int value);
 #endif
